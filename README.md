@@ -27,7 +27,7 @@ This exporter is setup to take input from environment variables. All variables a
 
 Run manually from Docker Hub:
 ```
-docker run -d --restart=always -p 9171:9171 -e REPOS="infinityworks/ranch-eye, infinityworks/prom-conf" 346612984731.dkr.ecr.ap-southeast-1.amazonaws.com/mantle-github-exporter
+docker run -d --restart=always -p 9171:9171 -e REPOS="infinityworks/ranch-eye, infinityworks/prom-conf" githubexporter/github-exporter
 ```
 
 Run manually from Docker Hub (With GitHub App):
@@ -50,7 +50,7 @@ github-exporter:
       - 9171
     ports:
       - 9171:9171
-    image: 346612984731.dkr.ecr.ap-southeast-1.amazonaws.com/mantle-github-exporter:latest
+    image: githubexporter/github-exporter:latest
     environment:
       - REPOS=<REPOS you want to monitor>
       - GITHUB_TOKEN=<your github api token>
