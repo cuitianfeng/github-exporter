@@ -29,6 +29,12 @@ github_repo_stars{archived="false",fork="false",language="Go",license="mit",priv
 github_repo_watchers{archived="false",fork="false",language="Go",license="mit",private="false",repo="github-exporter",user="infinityworks"} 10
 # TYPE github_repo_release_downloads gauge
 github_repo_release_downloads{name="release1.0.0",repo="github-exporter",user="infinityworks"} 3500
+# HELP github_repo_latest_release The latest release tag of a GitHub repository
+# TYPE github_repo_latest_release gauge
+github_repo_latest_release{repo="go-ethereum",tag="v1.15.5",user="ethereum"} 1
+# HELP github_repo_latest_release_timestamp The latest release published timestamp of a GitHub repository
+# TYPE github_repo_latest_release_timestamp gauge
+github_repo_latest_release_timestamp{repo="go-ethereum",user="ethereum"} 1.741172194e+09
 ```
 
 <!--
